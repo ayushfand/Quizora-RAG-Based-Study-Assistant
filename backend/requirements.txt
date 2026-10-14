@@ -1,0 +1,16 @@
+# StudyQuiz AI — backend runtime dependencies
+# Python 3.11+
+# fastapi pinned below the 0.143/starlette-1.7 line: that combination has an
+# upstream regression where two routes on the same path break lazy-router
+# matching (FastAPI issue, reproduced with an included APIRouter).
+fastapi>=0.115.6,<0.142
+uvicorn[standard]>=0.30.0
+pydantic>=2.7.0
+pydantic-settings>=2.3.0
+SQLAlchemy>=2.0.30
+httpx>=0.27.0
+google-genai>=1.0.0
+python-multipart>=0.0.9
+PyMuPDF>=1.24.0
+python-pptx>=1.0.0
+chromadb>=0.5.0
