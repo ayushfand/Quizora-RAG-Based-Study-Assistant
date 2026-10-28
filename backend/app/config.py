@@ -31,12 +31,13 @@ class Settings(BaseSettings):
     )
 
     # --- Application -------------------------------------------------------
-    app_name: str = "StudyQuiz AI"
+    app_name: str = "Quizora"
+    app_description: str = "RAG based study assistant"
     app_version: str = "0.1.0"
     api_prefix: str = "/api"
 
     # --- Storage -----------------------------------------------------------
-    database_url: str = "sqlite:///./data/studyquiz.db"
+    database_url: str = "sqlite:///./data/quizora.db"
     chroma_dir: str = "./data/chroma"
     max_upload_mb: int = 50
 

@@ -1,4 +1,4 @@
-"""SQLAlchemy 2.0 ORM models for StudyQuiz AI.
+"""SQLAlchemy 2.0 ORM models for Quizora — RAG based study assistant.
 
 All schema tables are defined here up front (Phase 1) so the database can be
 created once and filled in by later phases:
@@ -18,7 +18,7 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 
 class Base(DeclarativeBase):
-    """Declarative base for all StudyQuiz AI tables."""
+    """Declarative base for all Quizora tables."""
 
 
 class DocumentStatus(str, enum.Enum):

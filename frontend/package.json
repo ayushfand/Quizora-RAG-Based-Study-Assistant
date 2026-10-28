@@ -1,5 +1,6 @@
 {
-  "name": "studyquiz-ai-frontend",
+  "name": "quizora",
+  "description": "Quizora — RAG based study assistant frontend",
   "private": true,
   "version": "0.1.0",
   "type": "module",

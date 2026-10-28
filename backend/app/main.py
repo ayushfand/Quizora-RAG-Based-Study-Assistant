@@ -1,4 +1,4 @@
-"""FastAPI application entrypoint for StudyQuiz AI."""
+"""FastAPI application entrypoint for Quizora — RAG based study assistant."""
 
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ def create_app() -> FastAPI:
     app = FastAPI(
         title=settings.app_name,
         version=settings.app_version,
-        description="RAG-based quiz generation and AI evaluation for students.",
+        description="Quizora — RAG based study assistant for quiz generation and AI evaluation.",
         lifespan=lifespan,
     )
 
@@ -48,6 +48,7 @@ def create_app() -> FastAPI:
     def root() -> dict:
         return {
             "name": settings.app_name,
+            "description": "RAG based study assistant",
             "version": settings.app_version,
             "docs": "/docs",
             "health": f"{settings.api_prefix}/health",

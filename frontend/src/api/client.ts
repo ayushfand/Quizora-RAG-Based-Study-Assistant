@@ -1,4 +1,4 @@
-// Thin fetch wrapper around the StudyQuiz AI backend.
+// Thin fetch wrapper around the Quizora backend (RAG based study assistant).
 //
 // The dev server proxies /api to the backend, so the default base is relative.
 // Set VITE_API_BASE_URL to point at a remote backend in production builds.

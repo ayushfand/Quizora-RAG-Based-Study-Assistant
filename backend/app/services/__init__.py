@@ -1,4 +1,4 @@
-"""Business services for StudyQuiz AI."""
+"""Business services for Quizora — RAG based study assistant."""
 
 from .mcq import McqGrade, grade_mcq
 

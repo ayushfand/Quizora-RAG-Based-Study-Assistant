@@ -5,7 +5,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import type { ReactNode } from "react";
 import type { LlmMode } from "../api/types";
 
-const STORAGE_KEY = "studyquiz.llmMode";
+const STORAGE_KEY = "quizora.llmMode";
 
 interface ModeContextValue {
   mode: LlmMode;
@@ -16,7 +16,7 @@ interface ModeContextValue {
 const ModeContext = createContext<ModeContextValue | undefined>(undefined);
 
 function readStoredMode(): LlmMode {
-  const stored = localStorage.getItem(STORAGE_KEY);
+  const stored = localStorage.getItem(STORAGE_KEY) ?? localStorage.getItem("studyquiz.llmMode");
   return stored === "gemini" ? "gemini" : "local";
 }
 

@@ -1,3 +1,3 @@
-# StudyQuiz AI — development / test dependencies
+# Quizora — RAG based study assistant development / test dependencies
 -r requirements.txt
 pytest>=8.0.0

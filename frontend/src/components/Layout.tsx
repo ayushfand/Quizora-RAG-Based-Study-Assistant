@@ -15,14 +15,14 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="app-shell">
       <header className="topbar">
-        <NavLink to="/" className="brand">
+        <NavLink to="/" className="brand" title="Quizora — RAG based study assistant">
           <div className="brand-icon">
             <BookOpen size={19} />
           </div>
           <div>
-            StudyQuiz <span className="gradient-text">AI</span>
+            Quizora
           </div>
-          <span className="badge-pill">RAG</span>
+          <span className="badge-pill">RAG Study Assistant</span>
         </NavLink>
 
         <nav className="nav-links">
@@ -53,6 +53,12 @@ export default function Layout({ children }: { children: ReactNode }) {
       </header>
 
       <main className="container">{children}</main>
+
+      <footer className="footer-bar">
+        <span>Quizora</span>
+        <span className="footer-dot">•</span>
+        <span>RAG based study assistant</span>
+      </footer>
     </div>
   );
 }

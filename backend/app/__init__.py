@@ -1,3 +1,3 @@
-"""StudyQuiz AI backend package."""
+"""Quizora backend package — RAG based study assistant."""
 
 __version__ = "0.1.0"

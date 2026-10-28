@@ -1,1 +1,1 @@
-"""API routers for StudyQuiz AI."""
+"""API routers for Quizora — RAG based study assistant."""

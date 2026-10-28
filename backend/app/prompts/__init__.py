@@ -1,4 +1,4 @@
-"""Prompt templates for StudyQuiz AI (files/constants, never inline strings)."""
+"""Prompt templates for Quizora — RAG based study assistant (files/constants, never inline strings)."""
 
 from .evaluation import (
     EVALUATION_SYSTEM_PROMPT,

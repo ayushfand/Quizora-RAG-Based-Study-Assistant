@@ -1,6 +1,6 @@
-# StudyQuiz AI
+# Quizora — RAG Based Study Assistant
 
-A RAG-based study platform: students upload study material (PDF / PPTX), get
+A RAG-based study assistant platform: students upload study material (PDF / PPTX), get
 auto-generated quizzes, and receive AI-evaluated answers with detailed
 feedback.
 
@@ -70,7 +70,7 @@ LLM services with Pydantic-validated structured output.
 ## Repository layout
 
 ```
-StudyQuiz-AI/
+Quizora/
 ├── backend/
 │   ├── app/
 │   │   ├── main.py            # FastAPI app + CORS + routers
@@ -214,7 +214,7 @@ npm run build       # typecheck + production bundle
 
 ## Configuration (`backend/.env`)
 
-| Variable              | Default               | Description                              |
+| Variable              | Default               |Description                              |
 | --------------------- | --------------------- | ---------------------------------------- |
 | `DEFAULT_LLM_MODE`    | `local`               | `local` or `gemini`                      |
 | `OLLAMA_BASE_URL`     | `http://localhost:11434` | Ollama server                            |
@@ -223,7 +223,7 @@ npm run build       # typecheck + production bundle
 | `GEMINI_API_KEY`      | *(empty)*             | Google API key (leave empty to disable)  |
 | `GEMINI_MODEL`        | `gemini-2.0-flash`    | Gemini generation model                  |
 | `CHROMA_DIR`          | `./data/chroma`       | Persistent vector store path             |
-| `DATABASE_URL`        | `sqlite:///./data/studyquiz.db` | SQL database (Postgres-compatible) |
+| `DATABASE_URL`        | `sqlite:///./data/quizora.db`   | SQL database (Postgres-compatible) |
 | `MAX_UPLOAD_MB`       | `50`                  | Upload size limit                        |
 | `LLM_TIMEOUT_SECONDS` | `180`                 | Per-call LLM timeout (raise on slow CPUs) |
 | `LLM_MAX_JSON_ATTEMPTS` | `3`                 | Structured-JSON retry budget             |
@@ -397,7 +397,7 @@ dev server proxies `/api` so the browser sees a single origin.
   a collapsible model answer, and source page tags.
 - **History** — all attempts with score/percentage and links to full results.
 - **Mode toggle** — Local ↔ Gemini in the top bar, persisted in
-  `localStorage` (`studyquiz.llmMode`) and sent with generation/submission
+  `localStorage` (`quizora.llmMode`) and sent with generation/submission
   requests. Gemini shows a warning marker when `GEMINI_API_KEY` is unset.
 - **Health indicator** — polls `/api/health` and surfaces database, Ollama,
   Gemini, and embedding availability.

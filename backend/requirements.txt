@@ -1,4 +1,4 @@
-# StudyQuiz AI — backend runtime dependencies
+# Quizora — RAG based study assistant backend runtime dependencies
 # Python 3.11+
 # fastapi pinned below the 0.143/starlette-1.7 line: that combination has an
 # upstream regression where two routes on the same path break lazy-router

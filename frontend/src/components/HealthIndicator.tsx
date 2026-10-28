@@ -44,27 +44,11 @@ export default function HealthIndicator({ health, loading, onRefresh }: Props) {
       </button>
 
       {showDetails && (
-        <div
-          style={{
-            position: "absolute",
-            top: "calc(100% + 8px)",
-            right: 0,
-            zIndex: 100,
-            background: "#0f172a",
-            border: "1px solid rgba(255, 255, 255, 0.15)",
-            borderRadius: "14px",
-            boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.5)",
-            padding: "1rem",
-            width: "270px",
-            color: "#e2e8f0",
-            fontSize: "0.82rem",
-          }}
-        >
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem", borderBottom: "1px solid rgba(255,255,255,0.08)", paddingBottom: "0.5rem" }}>
-            <strong style={{ color: "#ffffff", fontSize: "0.88rem" }}>System Services</strong>
+        <div className="health-dropdown-popup">
+          <div className="health-dropdown-header">
+            <strong>System Services</strong>
             <button
               className="ghost sm"
-              style={{ color: "#94a3b8", padding: "0.2rem 0.4rem" }}
               onClick={(e) => {
                 e.stopPropagation();
                 onRefresh();
